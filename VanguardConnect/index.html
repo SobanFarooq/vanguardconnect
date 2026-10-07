@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VanguardConnect - Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+  <link rel="stylesheet" href="assets/css/luxe.css">
+</head>
+<body class="login-body">
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-11 col-sm-8 col-md-6 col-lg-4">
+        <div class="card v-card login-card">
+          <div class="card-body p-4">
+
+            <div class="text-center mb-4">
+              <div class="brand-mark">🛡️</div>
+              <h1 class="h3 brand-title">VanguardConnect</h1>
+              <p class="text-muted small mb-0">Rank-Aware Communication Platform</p>
+            </div>
+
+            <form id="loginForm" novalidate>
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="e.g. captainahmed" autocomplete="username">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="current-password">
+              </div>
+
+              <!-- Validation message (hidden until needed) -->
+              <div id="message" class="alert alert-danger d-none" role="alert"></div>
+
+              <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+
+            <p class="text-center text-muted small mt-3 mb-0">Demo: captainahmed / 123</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script>document.documentElement.setAttribute("data-theme","light")</script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

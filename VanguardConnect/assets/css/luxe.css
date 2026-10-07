@@ -1,0 +1,132 @@
+/* ===== LUXE THEME: flat, hairlines, no shadows, no rounded corners ===== */
+/* Load this LAST on every page, after all other stylesheets. */
+
+:root {
+  --primary: #111111;
+  --secondary: #333333;
+  --accent-soft: #f3f1ed;
+  --bg: #faf9f7;
+  --surface: #ffffff;
+  --text: #111111;
+  --muted: #8a8782;
+  --border: #e4e1db;
+  --radius: 0;
+  --shadow: none;
+}
+[data-theme="dark"] {
+  --primary: #f4f4f2;
+  --secondary: #d4d4d0;
+  --accent-soft: rgba(255, 255, 255, .07);
+  --bg: #232325;
+  --surface: #2b2b2e;
+  --text: #f4f4f2;
+  --muted: #a6a6ab;
+  --border: rgba(255, 255, 255, .12);
+}
+
+body { font-weight: 400; letter-spacing: .2px; }
+::selection { background: var(--text); color: var(--surface); }
+h1, h2, h3, h4, h5, h6 { font-weight: 400; letter-spacing: 3px; text-transform: uppercase; }
+
+/* Surfaces: no boxes, no shadows, hairlines only */
+.v-card { background: var(--surface); border: 1px solid var(--border); border-radius: 0; box-shadow: none; }
+.v-card.post, .v-card.ann {
+  background: transparent; border-width: 0 0 1px 0;
+  padding: 28px 0; margin-bottom: 0;
+}
+.ann.pinned, .ann.emergency { border-left: 0; }
+.login-card { box-shadow: none; padding: 24px; }
+
+/* Navbar */
+.v-nav { background: var(--surface); border-bottom: 1px solid var(--border); }
+.brand-title { color: var(--text); font-size: .8rem; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; }
+.nav-search { border-radius: 0; background: transparent; border: 0; border-bottom: 1px solid var(--border); }
+
+/* Sidebar links */
+.side-link {
+  border-radius: 0; font-size: .7rem; letter-spacing: 2.5px; text-transform: uppercase;
+  padding: 12px 14px; color: var(--muted); font-weight: 400;
+}
+.side-link:hover { background: transparent; color: var(--text); }
+.side-link.active { background: transparent; color: var(--text); font-weight: 700; box-shadow: inset 2px 0 0 var(--text); }
+
+/* Buttons */
+.btn { border-radius: 0; font-size: .7rem; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; padding: 10px 22px; }
+.btn-sm { padding: 7px 16px; }
+.btn-primary { background: var(--text); border-color: var(--text); color: var(--surface); }
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active { background: transparent !important; color: var(--text) !important; border-color: var(--text) !important; }
+.btn-soft { color: var(--muted); padding-left: 10px; padding-right: 10px; }
+.btn-soft:hover { background: transparent; color: var(--text); }
+
+/* Inputs: underline only */
+.form-control, .form-select {
+  border-radius: 0; background: transparent; border-width: 0 0 1px 0; border-color: var(--border);
+  padding-left: 0; box-shadow: none; font-size: .9rem;
+}
+.form-control:focus, .form-select:focus { background: transparent; border-color: var(--text); box-shadow: none; }
+.form-control::placeholder { color: var(--muted); letter-spacing: 1px; }
+.form-label { font-size: .68rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+.v-card > .d-flex > .form-control, .chat-input .form-control { padding-left: 4px; }
+
+/* Avatars, chips, tags: square and quiet */
+.avatar { border-radius: 0; background: var(--text); color: var(--surface); font-size: .8rem; letter-spacing: 1px; }
+.profile-avatar { border: 4px solid var(--surface); }
+.rank-chip {
+  border-radius: 0; background: transparent; color: var(--text); border: 1px solid var(--text);
+  font-size: .6rem; letter-spacing: 1.8px; padding: 2px 8px;
+}
+[data-theme="dark"] .rank-chip { color: var(--text); }
+.rank-chip.high { background: var(--text); color: var(--surface); }
+.cat-tag { text-transform: uppercase; letter-spacing: 2px; font-size: .62rem; }
+.badge-pill { border-radius: 0; background: transparent; border: 1px solid var(--border); text-transform: uppercase; letter-spacing: 1.5px; font-size: .62rem; }
+.section-title { color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 10px; letter-spacing: 2.5px; }
+
+/* Feed controls */
+.vote-pill { border-radius: 0; background: transparent; border: 0; }
+.vote-pill button { padding: 4px 10px 4px 0; font-size: .8rem; }
+.filter-row { gap: 24px; border-bottom: 1px solid var(--border); }
+.filter-row .btn, .filter-row .btn.active {
+  background: transparent; border: 0; border-bottom: 1px solid transparent; color: var(--muted);
+  padding: 10px 0; margin-bottom: -1px;
+}
+.filter-row .btn.active { color: var(--text); border-bottom-color: var(--text); }
+.rate-btn { border-radius: 0; }
+.rate-btn.on { background: transparent; border-color: var(--text); }
+
+/* Profile + chat */
+.profile-cover { background: #111; border-radius: 0; height: 140px; }
+.chat { border-radius: 0; }
+.contact { border-radius: 0; }
+.contact:hover, .contact.active { background: var(--accent-soft); }
+.bubble { border-radius: 0; background: transparent; }
+.bubble.mine { background: var(--text); color: var(--surface); border-color: var(--text); }
+
+/* Login */
+.login-body { background: var(--bg); }
+.login-card .brand-mark { background: transparent; }
+
+/* Bootstrap bits */
+.dropdown-menu, .modal-content, .offcanvas, .alert { border-radius: 0; box-shadow: none; border: 1px solid var(--border); background: var(--surface); color: var(--text); }
+.dropdown-item { font-size: .7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text); }
+.dropdown-item:hover { background: var(--accent-soft); }
+.alert-danger { background: transparent; color: var(--danger); font-size: .8rem; }
+.btn-close { filter: none; }
+[data-theme="dark"] .btn-close { filter: invert(1); }
+
+/* Smooth theme switch */
+.theme-fade, .theme-fade *, .theme-fade *::before, .theme-fade *::after {
+  transition: background-color .4s ease, color .4s ease, border-color .4s ease !important;
+}
+
+/* Navbar shrinks + frosts on scroll */
+.v-nav { transition: padding .3s ease, background-color .3s ease; }
+.v-nav.scrolled {
+  padding-top: .3rem !important;
+  padding-bottom: .3rem !important;
+  background: color-mix(in srgb, var(--surface) 85%, transparent);
+  backdrop-filter: blur(12px);
+}
+.v-nav .brand-logo { transition: height .3s ease; }
+.v-nav.scrolled .brand-logo { height: 24px; }
+.v-nav .brand-title { transition: letter-spacing .3s ease; }
+.v-nav.scrolled .brand-title { letter-spacing: 7px; }

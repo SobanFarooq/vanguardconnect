@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VanguardConnect - Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/luxe.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <div class="layout row g-4">
+    <aside class="col-lg-3 d-none d-lg-block" id="sidebar"></aside>
+    <main class="col-lg-9">
+      <div id="profileBox"></div>
+      <div class="modal fade" id="editModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content v-card">
+        <form id="editForm"><div class="modal-header"><h5 class="modal-title">Edit profile</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+        <div class="modal-body d-grid gap-2">
+          <input class="form-control" id="e_name" placeholder="Name">
+          <input class="form-control" id="e_branch" placeholder="Branch">
+          <input class="form-control" id="e_unit" placeholder="Unit">
+          <input class="form-control" id="e_years" type="number" min="0" placeholder="Years of service">
+        </div><div class="modal-footer"><button class="btn btn-primary">Save</button></div></form></div></div></div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script>buildLayout("profile.html")</script>
+  <script src="assets/js/profile.js"></script>
+</body>
+</html>

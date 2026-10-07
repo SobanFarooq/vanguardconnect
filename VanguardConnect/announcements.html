@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VanguardConnect - Announcements</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/luxe.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <div class="layout row g-4">
+    <aside class="col-lg-3 d-none d-lg-block" id="sidebar"></aside>
+    <main class="col-lg-9">
+      <div class="v-card p-3 mb-3" id="createBox"><p class="section-title">New announcement</p>
+        <form id="annForm" class="d-grid gap-2">
+          <input class="form-control" id="a_title" placeholder="Title" required>
+          <textarea class="form-control" id="a_content" rows="2" placeholder="Details" required></textarea>
+          <div class="d-flex gap-2"><select class="form-select w-auto" id="a_type"></select><button class="btn btn-primary ms-auto px-4">Publish</button></div>
+        </form></div>
+      <div class="filter-row">
+        <button class="btn active" data-f="All">All</button><button class="btn" data-f="Official">Official</button>
+        <button class="btn" data-f="Unit">Unit</button><button class="btn" data-f="Friendly Alert">Friendly Alerts</button>
+        <button class="btn" data-f="Emergency">Emergency</button><button class="btn" data-f="Pinned">Pinned</button>
+      </div>
+      <div id="annList"></div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script>buildLayout("announcements.html")</script>
+  <script src="assets/js/announcements.js"></script>
+</body>
+</html>
